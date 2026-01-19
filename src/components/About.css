@@ -1,0 +1,162 @@
+/* =====================================================
+   ABOUT SECTION — FINAL RESPONSIVE ARCHITECTURE
+   ===================================================== */
+
+.about-section {
+  padding-block: clamp(70px, 12vh, 120px);
+  padding-inline: clamp(16px, 4vw, 48px);
+}
+
+/* GRID LAYOUT */
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(260px, 420px) 1fr;
+  gap: clamp(32px, 6vw, 64px);
+  align-items: center;
+  max-width: 1100px;
+  margin-inline: auto;
+}
+
+/* =====================================================
+   IMAGE CARD — CONTROLLED, NEVER PORTRAIT
+   ===================================================== */
+
+.about-image-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 18px;
+  padding: 14px;
+  backdrop-filter: blur(12px);
+
+  max-width: 420px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.about-image-card img {
+  width: 100%;
+  height: auto;
+
+  /* KEY FIX */
+  max-height: 420px;          /* prevents tall portrait */
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 12px;
+  display: block;
+}
+
+/* =====================================================
+   TEXT CARD — READABLE AT ALL SIZES
+   ===================================================== */
+
+.about-text-card {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 18px;
+  padding: clamp(26px, 5vw, 40px);
+  backdrop-filter: blur(12px);
+
+  max-width: 720px;
+}
+
+/* TITLE */
+.about-text-card h2 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  margin-bottom: 18px;
+  color: #ffffff;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+/* PARAGRAPHS */
+.about-text-card p {
+  font-size: clamp(0.9rem, 2.2vw, 1rem);
+  line-height: clamp(1.55, 2.4vw, 1.7);
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 16px;
+
+  max-width: 62ch; /* perfect reading width */
+  text-wrap: pretty;
+}
+
+/* =====================================================
+   TAGS — CLEAN, WRAP SAFELY
+   ===================================================== */
+
+.about-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(8px, 2vw, 14px);
+  margin-top: 22px;
+}
+
+.about-tags span {
+  padding: clamp(6px, 1.5vw, 9px)
+           clamp(12px, 3vw, 18px);
+  font-size: clamp(0.65rem, 1.8vw, 0.75rem);
+  border-radius: 999px;
+
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(99, 102, 241, 0.12);
+  border: 1px solid rgba(99, 102, 241, 0.35);
+}
+
+/* =====================================================
+   TABLETS & SMALL LAPTOPS
+   ===================================================== */
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-text-card {
+    margin-inline: auto;
+  }
+
+  .about-text-card p {
+    margin-inline: auto;
+  }
+
+  .about-tags {
+    justify-content: center;
+  }
+}
+
+/* =====================================================
+   VERY SMALL DEVICES (≤ 360px)
+   ===================================================== */
+
+@media (max-width: 360px) {
+  .about-text-card {
+    padding: 22px;
+  }
+
+  .about-text-card p {
+    font-size: 0.85rem;
+  }
+}
+
+/* =====================================================
+   ULTRA LARGE SCREENS (4K+)
+   ===================================================== */
+
+@media (min-width: 1800px) {
+  .about-grid {
+    grid-template-columns: 420px 1fr;
+  }
+
+  .about-text-card p {
+    font-size: 1.05rem;
+  }
+}
+
+/* =====================================================
+   GLOBAL SAFETY
+   ===================================================== */
+
+.about-section * {
+  max-width: 100%;
+}

@@ -1,0 +1,164 @@
+.hero-section {
+  min-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* Top kicker */
+.hero-kicker {
+  font-size: 0.72rem;
+  letter-spacing: 3px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 14px;
+  opacity: 0;
+  animation: fadeDown 0.9s ease forwards;
+}
+
+/* Name */
+.hero-title {
+  font-size: clamp(2.9rem, 6vw, 5.2rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 18px;
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+}
+
+/* One-line impact statement */
+.hero-subtitle {
+  max-width: 560px;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 34px;
+  opacity: 0;
+  animation: fadeUp 1.15s ease forwards;
+}
+
+/* Resume button */
+.hero-button {
+  background: linear-gradient(135deg, #6366f1, #38bdf8);
+  color: #ffffff;
+  padding: 14px 34px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  opacity: 0;
+  animation: fadeUp 1.3s ease forwards;
+}
+
+.hero-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 40px rgba(56, 189, 248, 0.35);
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* =========================================
+   UNIVERSAL RESPONSIVE SAFETY NET
+   ========================================= */
+
+/* Ensure hero always breathes properly */
+.hero-section {
+  min-height: min(88vh, 900px);
+  padding-inline: clamp(14px, 4vw, 32px);
+  padding-block: clamp(80px, 18vh, 160px);
+}
+
+/* Kicker scales subtly, never breaks */
+.hero-kicker {
+  font-size: clamp(0.6rem, 1.6vw, 0.75rem);
+  letter-spacing: clamp(2px, 0.6vw, 3.5px);
+  text-wrap: balance;
+}
+
+/* Name scales smoothly across ALL screens */
+.hero-title {
+  font-size: clamp(2.2rem, 8vw, 5.4rem);
+  line-height: 1.05;
+  max-width: 12ch;
+  text-wrap: balance;
+}
+
+/* Subtitle auto-adjusts width + size */
+.hero-subtitle {
+  font-size: clamp(0.9rem, 2.2vw, 1.1rem);
+  max-width: min(90%, 620px);
+  line-height: clamp(1.55, 2.4vw, 1.75);
+  text-wrap: pretty;
+}
+
+/* Button stays tappable on tiny screens */
+.hero-button {
+  font-size: clamp(0.85rem, 2vw, 0.95rem);
+  padding-inline: clamp(22px, 6vw, 36px);
+  padding-block: clamp(12px, 3vw, 15px);
+}
+
+/* =========================================
+   VERY VERY SMALL DEVICES (≤ 360px)
+   ========================================= */
+@media (max-width: 360px) {
+  .hero-title {
+    font-size: 2.1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.88rem;
+  }
+
+  .hero-button {
+    width: 100%;
+    max-width: 260px;
+  }
+}
+
+/* =========================================
+   ULTRA LARGE SCREENS (4K+)
+   ========================================= */
+@media (min-width: 1800px) {
+  .hero-section {
+    min-height: 92vh;
+  }
+
+  .hero-title {
+    font-size: 5.6rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.15rem;
+  }
+}
+
+/* =========================================
+   SAFETY: Prevent text overflow everywhere
+   ========================================= */
+.hero-section * {
+  max-width: 100%;
+}

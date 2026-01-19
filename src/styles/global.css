@@ -1,0 +1,74 @@
+/* =========================
+   GLOBAL DESIGN SYSTEM
+========================= */
+
+:root {
+  --bg-main: #050b1e;
+  --bg-deep: #020617;
+  --accent-1: #4f46e5;
+  --accent-2: #22d3ee;
+  --text-main: #e5e7eb;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.15);
+}
+
+/* Full page background */
+.app-root {
+  min-height: 100vh;
+  background: radial-gradient(
+      circle at top left,
+      rgba(79, 70, 229, 0.15),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(34, 211, 238, 0.12),
+      transparent 40%
+    ),
+    var(--bg-main);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated grid overlay */
+.app-root::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.04) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.04) 1px,
+      transparent 1px
+    );
+  background-size: 60px 60px;
+  animation: gridMove 40s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes gridMove {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 600px 600px;
+  }
+}
+
+/* Content wrapper */
+.page-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+/* Utility */
+.center {
+  text-align: center;
+}

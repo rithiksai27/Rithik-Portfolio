@@ -1,0 +1,72 @@
+.skills-section {
+  padding: clamp(80px, 8vw, 130px) 6vw;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: clamp(1.9rem, 3vw, 2.5rem);
+  font-weight: 600;
+  margin-bottom: clamp(50px, 6vw, 80px);
+}
+
+/* ARCHITECTURE GRID */
+.skills-architecture {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(22px, 3vw, 34px);
+}
+
+/* BLOCK */
+.skill-block {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: clamp(22px, 3vw, 30px);
+  backdrop-filter: blur(14px);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.skill-block:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
+}
+
+/* HEADINGS */
+.skill-block h3 {
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+/* LIST */
+.skill-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px 18px;
+}
+
+.skill-block li {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  position: relative;
+  padding-left: 14px;
+}
+
+.skill-block li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #60a5fa;
+}
+
+/* VERY SMALL DEVICES */
+@media (max-width: 420px) {
+  .skill-block ul {
+    grid-template-columns: 1fr;
+  }
+}

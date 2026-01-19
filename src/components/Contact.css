@@ -1,0 +1,91 @@
+/* SECTION */
+.contact-section {
+  padding: clamp(80px, 12vw, 120px) 20px 30px;
+  display: flex;
+  justify-content: center;
+}
+
+/* CONTAINER */
+.contact-inner {
+  width: 100%;
+  max-width: 760px;
+  text-align: center;
+}
+
+/* TITLE */
+.contact-title {
+  font-size: clamp(1.9rem, 3.5vw, 2.6rem);
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+/* DESCRIPTION */
+.contact-text {
+  font-size: clamp(0.95rem, 1.4vw, 1.05rem);
+  line-height: 1.7;
+  opacity: 0.85;
+  max-width: 640px;
+  margin: 0 auto 36px;
+}
+
+/* ACTIONS */
+.contact-actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* BASE BUTTON */
+.contact-btn {
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #f9fafb;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+}
+
+/* HOVER */
+.contact-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+  opacity: 0.95;
+}
+
+/* EMAIL — EMERALD / TEAL */
+.contact-btn.email {
+  background: linear-gradient(135deg, #0f766e, #14b8a6);
+}
+
+/* GITHUB — GRAPHITE / CHARCOAL */
+.contact-btn.github {
+  background: linear-gradient(135deg, #111827, #374151);
+}
+
+/* LINKEDIN — DEEP CYAN */
+.contact-btn.linkedin {
+  background: linear-gradient(135deg, #0369a1, #0ea5e9);
+}
+
+/* FOOTNOTE */
+.contact-footnote {
+  margin-top: 42px;
+  font-size: 0.8rem;
+  opacity: 0.55;
+}
+
+/* VERY SMALL DEVICES */
+@media (max-width: 420px) {
+  .contact-btn {
+    padding: 11px 18px;
+    font-size: 0.85rem;
+  }
+
+  .contact-text {
+    margin-bottom: 30px;
+  }
+}

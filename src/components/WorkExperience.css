@@ -1,0 +1,231 @@
+.work-section {
+  padding: 90px 6vw 110px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: clamp(1.9rem, 3vw, 2.5rem);
+  font-weight: 600;
+  margin-bottom: 70px;
+}
+
+/* MAIN BLOCK */
+.work-block {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 22px;
+  padding: 34px 36px;
+  margin-bottom: 40px;
+  backdrop-filter: blur(14px);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.work-block:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+}
+
+/* HEADER */
+.work-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 28px;
+  gap: 20px;
+}
+
+.work-header h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.work-org {
+  font-size: 0.95rem;
+  opacity: 0.7;
+}
+
+.work-date {
+  font-size: 0.9rem;
+  opacity: 0.6;
+  white-space: nowrap;
+}
+
+/* METRICS */
+.work-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 26px;
+  margin-bottom: 28px;
+}
+
+.metric-value {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #60a5fa;
+}
+
+.metric-label {
+  font-size: 0.85rem;
+  opacity: 0.65;
+}
+
+/* LINK */
+.work-link {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #93c5fd;
+  text-decoration: none;
+  transition: opacity 0.25s ease;
+}
+
+.work-link:hover {
+  opacity: 0.75;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .work-metrics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .work-header {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+/* ================================
+   WORK EXPERIENCE — RESPONSIVE
+================================ */
+
+.work-section {
+  padding: clamp(60px, 8vw, 110px) 6vw;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Title */
+.section-title {
+  text-align: center;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 600;
+  margin-bottom: clamp(40px, 6vw, 70px);
+}
+
+/* ================================
+   EXPERIENCE BLOCK
+================================ */
+
+.work-block {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 22px;
+  padding: clamp(22px, 4vw, 36px);
+  margin-bottom: clamp(28px, 4vw, 40px);
+  backdrop-filter: blur(14px);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.work-block:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+}
+
+/* ================================
+   HEADER
+================================ */
+
+.work-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: clamp(20px, 4vw, 28px);
+}
+
+.work-header h3 {
+  font-size: clamp(1.1rem, 2vw, 1.25rem);
+  font-weight: 600;
+}
+
+.work-org {
+  font-size: clamp(0.85rem, 1.8vw, 0.95rem);
+  opacity: 0.7;
+}
+
+.work-date {
+  font-size: clamp(0.8rem, 1.6vw, 0.9rem);
+  opacity: 0.6;
+  white-space: nowrap;
+}
+
+/* ================================
+   METRICS — AUTO ADAPTIVE GRID
+================================ */
+
+.work-metrics {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(140px, 1fr)
+  );
+  gap: clamp(16px, 3vw, 26px);
+  margin-bottom: clamp(18px, 4vw, 28px);
+}
+
+.metric-value {
+  display: block;
+  font-size: clamp(1.15rem, 2.5vw, 1.4rem);
+  font-weight: 700;
+  color: #60a5fa;
+}
+
+.metric-label {
+  font-size: clamp(0.75rem, 1.6vw, 0.85rem);
+  opacity: 0.65;
+}
+
+/* ================================
+   LINK
+================================ */
+
+.work-link {
+  display: inline-block;
+  font-size: clamp(0.8rem, 1.8vw, 0.9rem);
+  font-weight: 500;
+  color: #93c5fd;
+  text-decoration: none;
+  transition: opacity 0.25s ease;
+}
+
+.work-link:hover {
+  opacity: 0.75;
+}
+
+/* ================================
+   VERY SMALL DEVICES (≤ 360px)
+================================ */
+
+@media (max-width: 360px) {
+  .work-header {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .work-date {
+    font-size: 0.75rem;
+  }
+}
+
+/* ================================
+   LARGE SCREENS (≥ 1440px)
+================================ */
+
+@media (min-width: 1440px) {
+  .work-section {
+    max-width: 1280px;
+  }
+}
