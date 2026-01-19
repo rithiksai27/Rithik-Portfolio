@@ -16,7 +16,7 @@ function Hero() {
 
       <a
         className="hero-button"
-        href="https://drive.google.com/file/d/1sTfWwf38_gtH457h1o9scJGa7kvuR_Ur/view"
+        href="https://drive.google.com/file/d/1y1d0N-oQ4HqbuuCsor-sqdpu58G8CCW9/view?usp=sharing"
         target="_blank"
         rel="noopener noreferrer"
       >
