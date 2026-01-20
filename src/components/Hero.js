@@ -39,7 +39,11 @@ function Hero() {
                 that hold up beyond demos — in production, under constraints,
                 and at scale.
               </p>
+               <div className="about-text-footer">
+    Built to hold under real constraints
+  </div>
           </div>
+          
 
           <div className="about-image-card">
             <img src={profileImg} alt="Rithik Sai" />

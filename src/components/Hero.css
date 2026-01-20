@@ -84,8 +84,10 @@
   text-align: left;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  
 }
+
 
 .about-text-card h2 {
   font-size: 1.7rem;
@@ -165,4 +167,20 @@
     bottom: 20px;
     right: 16px;
   }
+}
+.about-text-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-text-main {
+  flex: 0 0 auto;
+}
+
+.about-text-footer {
+  margin-top: auto;
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.45);
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }

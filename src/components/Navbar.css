@@ -170,28 +170,37 @@
   font-size: clamp(0.7rem, 2.2vw, 0.78rem);
   font-weight: 600;
   text-decoration: none;
+
   color: #e6fffa;
 
-  background: rgba(20, 184, 166, 0.18);
-  border: 1px solid rgba(20, 184, 166, 0.45);
-  border-radius: 999px;
+  /* softer, calmer teal */
+  background: rgba(20, 184, 166, 0.14);
+  border: 1px solid rgba(20, 184, 166, 0.38);
 
+  border-radius: 999px;
   white-space: nowrap;
 
-  flex-shrink: 1;      
-  min-width: 0;        
-  max-width: 100%;      
+  /* subtle presence, not a CTA push */
+  box-shadow: 0 4px 14px rgba(20, 184, 166, 0.18);
 
   backdrop-filter: blur(12px);
-  opacity: 0.9;
-  transition: transform 0.25s ease, opacity 0.25s ease;
+  opacity: 0.92;
+
+  transition: 
+    background 0.25s ease,
+    border 0.25s ease,
+    transform 0.25s ease,
+    opacity 0.25s ease;
 }
 
 
 .nav-resume:hover {
+  background: rgba(20, 184, 166, 0.2);
+  border-color: rgba(20, 184, 166, 0.5);
   opacity: 1;
   transform: translateY(-1px);
 }
+
 
 /* SMALL DEVICES */
 @media (max-width: 420px) {
