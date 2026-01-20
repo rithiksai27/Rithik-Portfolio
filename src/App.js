@@ -17,7 +17,6 @@ function App() {
       <Navbar />
       <div className="page-container">
         <Hero />
-        <About />
         <Education />
         <WorkExperience />
         <Projects />

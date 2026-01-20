@@ -7,7 +7,6 @@ function Navbar() {
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef(null);
 
-  // Hide / show navbar on scroll
   useEffect(() => {
     const handleScroll = () => {
       const current = window.scrollY;
@@ -19,14 +18,13 @@ function Navbar() {
       }
 
       setLastScroll(current);
-      setOpen(false); // ✅ CLOSE dropdown on scroll
+      setOpen(false);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScroll]);
 
-  // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
@@ -64,6 +62,16 @@ function Navbar() {
             </div>
           )}
         </div>
+
+        {/* Resume Button */}
+        <a
+          href="https://drive.google.com/file/d/1y1d0N-oQ4HqbuuCsor-sqdpu58G8CCW9/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="nav-resume"
+        >
+          Resume
+        </a>
 
       </div>
     </nav>

@@ -11,9 +11,14 @@
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 999px;
 
-  padding: 10px 18px;
+  max-width: calc(100vw - 24px);
+
+  padding-inline: clamp(10px, 3vw, 18px);
+  padding-block: 10px;
+
   transition: transform 0.35s ease, opacity 0.35s ease;
 }
+
 
 /* HIDE ON SCROLL */
 .navbar.hide {
@@ -25,6 +30,7 @@
 .nav-inner {
   display: flex;
   align-items: center;
+  
   gap: 14px;
 }
 
@@ -132,5 +138,65 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+/* =========================================
+   HERO ARCHITECTURE TUNING (NO REDESIGN)
+   ========================================= */
+
+/* Pull hero content slightly up */
+.hero-tight {
+  padding-top: clamp(60px, 14vh, 110px);
+  padding-bottom: clamp(40px, 10vh, 80px);
+}
+
+/* Pull about section INTO hero viewport */
+.about-pulled {
+  margin-top: clamp(40px, 8vh, 70px);
+}
+
+/* Ensure everything fits first screen */
+.hero-section {
+  min-height: 100vh;
+}
+
+
+/* =========================
+   RESUME BUTTON IN NAVBAR
+   ========================= */
+
+.nav-resume {
+  padding: clamp(5px, 1.5vw, 6px) clamp(10px, 2.5vw, 16px);
+  font-size: clamp(0.7rem, 2.2vw, 0.78rem);
+  font-weight: 600;
+  text-decoration: none;
+  color: #e6fffa;
+
+  background: rgba(20, 184, 166, 0.18);
+  border: 1px solid rgba(20, 184, 166, 0.45);
+  border-radius: 999px;
+
+  white-space: nowrap;
+
+  flex-shrink: 1;      
+  min-width: 0;        
+  max-width: 100%;      
+
+  backdrop-filter: blur(12px);
+  opacity: 0.9;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+
+.nav-resume:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+/* SMALL DEVICES */
+@media (max-width: 420px) {
+  .nav-resume {
+    padding: 5px 12px;
+    font-size: 0.72rem;
   }
 }
