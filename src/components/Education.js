@@ -11,7 +11,7 @@ export default function Education() {
         <p className="edu-org">KL University</p>
 
         <div className="edu-primary-meta">
-          <span className="edu-primary-score">CGPA 9.35</span>
+          <span className="edu-primary-score">CGPA 9.36</span>
           <span className="edu-primary-year">2026</span>
         </div>
       </div>
