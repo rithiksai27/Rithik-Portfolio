@@ -65,7 +65,7 @@ function Navbar() {
 
         {/* Resume Button */}
         <a
-          href="https://drive.google.com/file/d/1y1d0N-oQ4HqbuuCsor-sqdpu58G8CCW9/view?usp=sharing"
+          href="https://drive.google.com/file/d/1ouR0wyJ1ntrXy4Vpqt0TlyOzA5wdfVQM/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           className="nav-resume"
